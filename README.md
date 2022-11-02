@@ -44,9 +44,20 @@ Once complete run the main script. The script will loop over all resources detec
     }
 
 As the script can take a long time as you could have thousands of resources, the script will continue to update you by writing output to the screen.
-![](__GHOST_URL__/content/images/2022/10/image.png)
- Once complete, you will now have a table that can be returned through the $list variable. The properties that are returned can be found below:
-![](__GHOST_URL__/content/images/2022/10/image-1.png)
+<img src="image/subscription-search.png"
+     alt="overview"
+     style="float: middle; margin-right: 10px;"
+     width="600" 
+/>
+
+Once complete, you will now have a table that can be returned through the $list variable. The properties that are returned can be found below:
+
+<img src="image/list-variable.png"
+     alt="overview"
+     style="float: middle; margin-right: 10px;"
+     width="600" 
+/>
+
 You can now view all the diagnostic settings for resources reporting to a workspace, sometimes you may need to delete diagnostic settings if they are reporting to an incorrect workspace or you may just want to view all the diagnostic settings. In our example, we will continue by now removing these diagnostic settings as they are reporting to an incorrect workspace. I will do this by using the $list variable and using a where-object pipe to search for diagnostic settings reporting to the workspace "log-one". In this example, the "log-one" workspace is incorrect and I would like to remove these. 
 
 I will create a new variable called filter, which will be used to store all the diagnostic settings that I want to remove. 
@@ -61,5 +72,10 @@ Finally, we can remove the diagnostic settings for these resources by running th
             foreach { Remove-AzDiagnosticSetting -ResourceId $_.resourceId -Name $_.diagnosticName ; 
                 write-host "Removing diagnostic settings for $($_.resourceName) in $($_.subscriptionName), old workspace: $($_.workspaceName)" -f green } } }
 
-![](__GHOST_URL__/content/images/2022/10/image-5.png)
+<img src="image/removing.png"
+     alt="overview"
+     style="float: middle; margin-right: 10px;"
+     width="600" 
+/>
+
 Thanks for reading! If this article was useful, please just let me know. :) 
