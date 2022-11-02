@@ -11,11 +11,11 @@ The first set of commands to run will create two variables called $list and $sub
 
 - $list will create an empty list that we will use in the script.
 - $subscriptions will return all the subscriptions we will be looping over.
-
+```
     $list = New-Object System.Collections.Generic.List[System.Object]
-    
-    $subscriptions = Get-AzSubscription
 
+    $subscriptions = Get-AzSubscription
+```
 Once complete run the main script. The script will loop over all resources detected and if they can find a diagnostic setting that is reporting to a workspace it will create a hashtable and add that to the empty list, once complete it will return all the resources that have diagnostic settings reporting to a workspace. 
 
     Foreach ($sub in $subscriptions) {
