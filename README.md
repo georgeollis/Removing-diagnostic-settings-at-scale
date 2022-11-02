@@ -1,10 +1,9 @@
----
-title: Removing diagnostic settings at scale in Azure for Log Analytics Workspaces.
-slug: removing-diagnostic-settings-at-scale-in-azure
-date_published: 2022-10-19T08:43:57.000Z
-date_updated: 2022-10-19T08:48:08.000Z
-tags: Diagnostic Settings, Azure Monitor
----
+
+<img src="image/12.png"
+     alt="overview"
+     style="float: middle; margin-right: 10px;"
+     width="600" 
+/>
 
 Sometimes you may have a requirement to view all the diagnostic settings for your resources and where they are sending them. You may also have a requirement to remove these at scale. Firstly you will need to open PowerShell, this can be done through the Cloud Shell which already has the required modules installed. 
 
