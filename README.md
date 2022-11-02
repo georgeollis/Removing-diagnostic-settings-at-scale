@@ -44,6 +44,7 @@ Once complete run the main script. The script will loop over all resources detec
     }
 
 As the script can take a long time as you could have thousands of resources, the script will continue to update you by writing output to the screen.
+
 <img src="image/subscription-search.png"
      alt="overview"
      style="float: middle; margin-right: 10px;"
